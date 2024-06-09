@@ -1,0 +1,461 @@
+/* CSS */
+
+.all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    top: 100px;
+    position: absolute;
+}
+
+.score-load {
+    width: 990px;
+    height: 550px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-load-container {
+    top: 100px;
+    /* border: 5px solid black; */
+    /* background-color: #FFF2E9; */
+    z-index: 9999;
+    width: 990px;
+    height: 550px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif-image {
+    display: flex;
+    position: absolute; 
+    bottom: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    max-width: calc(100% - 20px); /* Adjust as needed */
+    justify-content: center;
+    align-items: center;
+    z-index: 0; /* Ensure it's below the random quote */
+    scale: .75;
+}
+
+
+.all-players {
+    width: 100%;
+    /* max-height: 400px;  */
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+
+.all-players .player-section {
+    margin: 10px; 
+    padding: 10px;
+}
+
+
+.all-players .player-header {
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: var(--player-color);
+    padding: 10px 10px 0 10px;
+
+}
+
+.all-players .player-header-rank {
+    color: #FFFFFF;
+    padding: 0 10px 10px 10px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: var(--player-color);
+    margin-top: 0;
+}
+
+.all-players table {
+    width: 300px;
+    height: 350px;
+    border-collapse: collapse;
+    border: 5px solid #FFF2E9;
+}
+
+.all-players th,
+.all-players td {
+    border: 5px solid var(--player-color);
+    padding: 5px;
+    text-align: left;
+}
+
+.all-players thead {
+    background: var(--player-color);
+}
+
+.all-players td.genre-column {
+    font-weight: bold;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+
+}
+
+.all-players .movie-titles {
+    text-align: center;
+}
+
+
+.copied-holder {
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px; /* Adjust the width of the holder */
+    /* height: 600px;  */
+    z-index: 9999;
+    display: flex; /* Set the display property to flex */
+    border: 5px solid black;
+    background-color: #FFF2E9;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.copied-box {
+    /* display: flex;  */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin: 2px;
+    width: 700px; /* Ensure the box doesn't exceed the width of its container */
+    min-height: 600px; 
+    max-height: 800px;
+}
+
+/* .copied-all-players {
+    display: flex;
+    width: 700px; 
+    margin: 0px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-height: 800px;
+} */
+
+/* .copied-content {
+    display: flex; 
+    width: 700px; 
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.copied-play {
+    text-align: right;
+}
+
+.copied-below {
+    display: flex; 
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.copied-p {
+    margin: 5px; 
+    text-align: center; 
+}
+
+.copied-below img {
+    margin: 5px; 
+}
+
+.copied-h2 {
+    font-family: "Magiona Display";
+    font-style: italic; 
+    text-transform: uppercase;
+    justify-content: left;
+    font-size: 30px;
+    margin: 0px;
+} */
+
+.copied-test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.copied-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: calc(100% - 10px);  */
+    margin-bottom: 15px; /* Add margin to the bottom */
+    width: 700px;
+}
+
+.copied-h2 {
+    font-family: "Magiona Display";
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.copied-play {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.copied-p {
+    margin-right: 10px; /* Add some margin between the image and the paragraph */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.copied-button {
+    width: 50%; /* Take full width */
+    padding: 10px;
+    text-align: center; /* Center the button horizontally */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/**/
+
+.table-container {
+    margin-top: 10px;
+}
+
+.copied-table {    
+    width: 700px;
+    height: 500px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 10px;
+    position: relative;
+    top: -10px; /* Move the table up by 10px */
+    /* height: 600px; */
+}
+
+.copied-player-section {
+    margin: 10px;
+    padding: 10px;
+    border-color: black!important;
+    background-color: var(--player-color)!important;
+}
+
+.copied-player-header {
+    color: #FFFFFF;
+    padding: 10px;
+    background-color: var(--player-color);
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+/* .copied-table th,
+.copied-table td {
+    width: auto; 
+} */
+
+.copied-table th,
+.copied-table td {
+    padding: 8px;
+    text-align: center; /* Center align text */
+    /* overflow: hidden; 
+    text-overflow: ellipsis; */
+    background: var(--player-color-opacity);
+}
+
+.copied-table tr {
+    border-bottom: 2px solid #FFF2E9; /* Add a black border below each row */
+}
+
+.copied-table tr:last-child {
+    border-bottom: none; /* Remove the border from the last row */
+}
+
+.thead-row {
+    text-transform: uppercase;
+    font-size: 10px;
+
+}
+
+.copied-table .player-cell {
+    padding: 4px;
+    text-align: center; /* Center align text */
+    font-family: roboto;
+    font-size: 10px;
+}
+
+.copied-table thead th {
+    background: var(--player-color);
+    color: #FFFFFF; /* Adjust text color for better visibility */
+    border-bottom: 2px solid #FFF2E9; /* Add bottom border to header row */
+
+}
+
+/* .ActionHorrorThriller {
+    /* font-size: 8px!important; */
+
+.copied-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 40px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.copied-close-button:hover {
+    color: #000;
+}
+
+.genre-define th {
+    word-wrap: break-word;
+}
+
+
+.copied-table .genre-column {
+    font-weight: bold;
+    text-align: right;
+    font-size: 12px;
+    background-color: black;
+    color: #FFF2E9;
+    border-right: 5px solid #FFF2E9; /* Add right border */
+    width: 100px; /* Adjust the width as needed */
+    word-wrap: break-word;
+    }
+
+/* .copied-table td.genre-column {
+    font-weight: bold;
+    text-align: right;
+    font-size: 10px;
+    background-color: black;
+    color: #FFF2E9;
+    border-right: 5px solid #FFF2E9; 
+}  */
+
+
+
+
+/* .copied-p {
+    margin: 0px;
+    text-align: center; 
+}
+
+.copied-below img {
+    margin-bottom: 5px;
+} */
+
+.copied-button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.copied-button button {
+    display: flex; /* Set the display property to flex */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #B6ABE3; /* Set the background color */
+    color: white; /* Set text color */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 2px solid black; 
+
+}
+    
+.copied-button button:hover {
+    background-color: #B6ABE3; /* Keep the same background color on hover */
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.copied-black-cell {
+    background-color: black!important;
+    color: white!important;
+    border-right: 5px solid #FFF2E9; /* Add right border */
+}
+
+.player-column {
+    background: var(--player-color)!important;
+}
+
+.button-include {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.initiate-share {
+    display: flex; /* Set the display property to flex */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #B6ABE3; /* Set the background color */
+    color: white; /* Set text color */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 2px solid black; 
+    height: 30px;
+    width: 500px;
+    margin-top: 10px;
+}
+
+.initiate-share:hover  {
+    display: flex; /* Set the display property to flex */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #B6ABE3; /* Set the background color */
+    color: white; /* Set text color */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 2px solid black; 
+    height: 30px;
+    width: 500px;
+    background-color: #B6ABE3; /* Keep the same background color on hover */
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+}
+
+.score-pop {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    top: calc(8%); 
+    /* transform: translate(-50%, -50%); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2A815;
+    width: 150px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    z-index: 9999; 
+}

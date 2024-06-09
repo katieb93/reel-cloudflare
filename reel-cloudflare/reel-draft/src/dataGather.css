@@ -1,0 +1,188 @@
+/* html, body, #root {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--Cream, #FFF2E9);
+    width: 100%;
+
+} */
+.home-root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -50px;
+    height: 420px;
+    width: 400px;
+}
+
+.info-form-form {
+    height: 100%;
+    width: 100%;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    border: 10px solid var(--Pink, #FFC1C6);
+    background: var(--Dark-Orange, #FF562F);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: white;
+    font-family: "Roboto Condensed", sans-serif; 
+    font-weight: 500;
+    padding: 10px;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.header {
+    display: flex;
+    margin-bottom: 0px;
+    font-size: 20px;
+}
+
+.descrip {
+    display: flex;
+    margin-top: 3px;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 190px;
+    height: 25px;
+    flex-shrink: 0;
+    border: 5px solid var(--Dark-Blue, #1D98BA);
+    background: #FFF;
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset; */
+    margin-bottom: 20px;
+    border-radius: 0;
+    text-align: center;
+}
+
+
+input:focus {
+    width: 190px;
+    height: 25px;
+    flex-shrink: 0;
+    border: 5px solid var(--Dark-Blue, #1D98BA);
+    background: #FFF !important; /* Ensure white background even on focus */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+input:hover {
+    width: 190px;
+    height: 25px;
+    flex-shrink: 0;
+    border: 5px solid var(--Dark-Blue, #1D98BA);
+    background: #FFF !important; /* Ensure white background even on focus */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.name-inputs {
+    margin: 5px;
+}
+
+.name-inputs:hover {
+    margin: 5px;
+}
+
+.name-inputs:focus {
+    margin: 5px;
+}
+
+.name-inputs::placeholder {
+    text-align: center;
+  }
+
+.namesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+
+}
+
+.confirm-button {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #1D98BA !important;
+    border: 5px solid #FFC1C6 !important; /* Add hash symbol before the color value */
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.confirm-button:hover {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: #1D98BA;
+    border: 5px solid #FFC1C6; /* Add hash symbol before the color value */
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.confirm-button:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.popup {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    top: calc(50%); 
+    left: 100%; 
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F2A815;
+    width: 150px;
+    padding: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    z-index: 9999; 
+  }
+
+
+
+/* Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */

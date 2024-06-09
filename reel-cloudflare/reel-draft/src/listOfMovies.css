@@ -1,0 +1,54 @@
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+}
+
+.player-board.inactive {
+    display: none;
+}
+  
+.player-board.swipe-forward {
+    animation: swipe-forward 0.5s ease-in-out;
+}
+  
+.player-board.swipe-backward {
+    animation: swipe-backward 0.5s ease-in-out;
+}
+  
+@keyframes swipe-forward {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+  
+@keyframes swipe-backward {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
+  
+
+[style--player-color="${color}"] {
+    background-color: var(--player-color);
+}
+
+
+.all-video {
+    top: 100px;
+    position: absolute; 
+}
+
+.video {
+    position: relative;
+    z-index: 9000;
+}
+  
+.x-button {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 9999;
+    font-size: 30px;
+    cursor: pointer;
+}

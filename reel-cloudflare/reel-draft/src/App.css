@@ -1,0 +1,26 @@
+/* html {
+  height: 100%;
+} */
+
+html, body, #root {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--Cream, #FFF2E9);
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  text-transform: uppercase;
+
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+

@@ -1,0 +1,119 @@
+.logline-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.home-home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* height: 420px;
+    width: 400px; */
+}
+
+.log-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+    width: 80%;
+}
+
+.site-title {
+    display: flex;
+    /* flex-direction: column;  */
+    align-items: baseline; /* Align items at the baseline */
+    margin-top: 10px; /* Adjust as needed */
+    /* margin-left: 100px; */
+}
+
+.with {
+    color: #000;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 10px; /* Add some space between the two elements */
+}
+
+.the-words {
+    color: #000;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0; /* Reset margin */
+}
+
+.text-home {
+    color: #000;
+    font-family: "Magiona Display";
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 90px;
+    text-transform: uppercase;
+    width: 70%;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.while {
+    color: var(--Dark-Orange, #FF562F);
+    font-family: "Magiona Display";
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 90px;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.circle-button {
+    position: relative;
+    display: inline-block;
+    width: 138px;
+    height: 138px;
+    border-radius: 50%;
+    background-color: #1D98BA;
+    border: 5px solid #FB6A0F;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.circle-button:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.circle-button:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+.triangle {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-button:hover .triangle svg path {
+    fill: #BFDEE7; /* Change the fill color of the triangle */
+}

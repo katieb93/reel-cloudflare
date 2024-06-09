@@ -1,0 +1,12 @@
+video {
+    width: 150%!important;
+    height: auto!important;
+
+  }
+
+.vid-here {
+    width: 960px;
+    height: 540px;
+    border: 5px solid black
+}
+
