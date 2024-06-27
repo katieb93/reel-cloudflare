@@ -1,0 +1,998 @@
+/* Index Formatting */
+
+.body-index {
+    /* width: 1440px;
+    height: 1024px; */
+    margin-left: 100px; /* Set everything 100px from the left side of the screen */
+    background: #FFF2E9;
+}
+
+.left-side {
+    position: relative;
+    width: 800px;
+    /* top: 100px; */
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.logline-layout {
+    /* position: relative;
+    display: flex; */
+    /* top: 30%; */
+    position: relative;
+    top: 150px;
+    height: 600px;
+    width: 800px;
+    /* flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0; */
+}
+
+.pick,
+.while {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-transform: uppercase;
+    line-height: 90px;
+    font-family: "Magiona Display";
+    font-style: italic;
+    font-size: 100px;
+    font-weight: 400;
+}
+
+.pick {
+    color: #000;
+}
+
+.while {
+    top: 180px;
+    color: var(--Dark-Orange, #FF562F);
+}
+
+.logo-layout {
+    display: flex;
+    align-items: flex-start; /* Align items to the start (top) of the container */
+    position: relative;
+    top: 80px;
+    /* top: 100px; */
+    width: 100%;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.black-reel {
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    margin-right: 10px; /* Add margin to separate the black reel from the text */
+}
+
+.logo-text-container {
+    position: relative;
+    top: 30px;
+    right: 0; /* Align to the right side of the container */
+    top: 0; /* Align to the top of the container */
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the start (top) of the container */
+}
+
+.with {
+    color: #000;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    margin: 0; /* Reset margin */
+}
+
+.the-logo-index {
+    color: #000;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    text-transform: uppercase;
+    margin: 0; /* Reset margin */
+}
+
+.right-side {
+    position: absolute;
+    top: 0; /* Adjust as needed */
+    right: 0; /* Align to the right side of the screen */
+    width: auto; /* Allow content to determine width */
+}
+
+.image-and-button-container {
+    position: relative;
+    /* display: inline-block; */
+}
+
+.color-film-reel {
+    width: 320px;
+    height: 1374.181px;
+    position: absolute;
+    right: 0;
+    /* background: url(</Users/katiebrown/film-draft-project/templates/colorfilmreelimg.png>) lightgray 50% / cover no-repeat; */
+}
+
+.play-button-index {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.play-button-index-circle {
+    position: absolute;
+    top: calc(1374.181px / 3); /* Set the button about a third of the way down the color reel */
+    right: 50%;
+    transform: translate(-50%, -50%); /* Center the button vertically */
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 175px; /* Half of the width/height for a perfect circle */
+    border: 20px solid #FFF2E9;
+    background: #FFF;
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.play-button-index-circle:focus {
+    position: absolute;
+    top: calc(1374.181px / 3); /* Set the button about a third of the way down the color reel */
+    right: 50%;
+    transform: translate(-50%, -50%); /* Center the button vertically */
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 175px; /* Half of the width/height for a perfect circle */
+    border: 20px solid #000;
+    background: #FFF;
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: none; /* Disable transition for box shadow */
+
+}
+
+.play-button-index-circle:active {
+    position: absolute;
+    top: calc(1374.181px / 3); /* Set the button about a third of the way down the color reel */
+    right: 50%;
+    transform: translate(-50%, -50%); /* Center the button vertically */
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 300px;
+    border: 20px solid #000;
+    background: #FFF;
+    box-shadow: 0px 4px 10px 30px rgba(0, 0, 0, 0.25) inset;
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+
+.play-button-index-text {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    width: 100%; /* Make the text take the full width of the circle */
+    height: 100%; /* Make the text take the full height of the circle */
+    color: var(--Orange, #FB6A0F);
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none; /* Remove button border */
+    background: transparent; /* Make button background transparent */
+    cursor: pointer; /* Show pointer cursor on hover */
+}
+
+/* infoGather Formatting */
+
+.year-num-info-card {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.body-info-gather {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+    background: #FFF2E9;
+    margin: 0; /* Remove default margin */
+}
+
+.players-display {
+    display: flex;
+    position: relative;
+    width: 500px;
+    height: 602px;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.info-gather-form {
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Set height to 100% */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    top: 0px;
+}
+
+.info-card-display {
+    /* position: relative;
+    top: 50px; */
+    border: 10px solid var(--Pink, #FFC1C6);
+    background: linear-gradient(180deg, rgba(251, 106, 15, 0.20) 0%, rgba(255, 86, 47, 0.20) 100%), var(--Dark-Orange, #FF562F);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pick-year-text {
+    position: relative;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Take full width of the container */
+    height: 50px; /* Set the height */
+}
+
+.pick-players-text {
+    position: relative;
+    top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Take full width of the container */
+    height: 50px; /* Set the height */
+}
+
+.pick-year,
+.num-of-years,
+.pick-players,
+.num-of-player {
+    position: relative;
+    top: 20%;
+    color: #FFF;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center; /* Center text horizontally */
+    margin: 0; /* Remove default margin */
+    padding: 5px 0 0 0;
+}
+
+.pick-year, .pick-players {
+    color: #FFF;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px; /* 75% */
+    text-transform: uppercase;
+}
+
+.num-of-years, .num-of-player {
+    color: #FFF;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 15px;
+    text-transform: uppercase;
+}
+
+.pick-years-input,
+.pick-players-input {
+    width: 190px;
+    top: 10px;
+    height: 40px;
+    display: flex;
+    position: relative;
+    top: 20%;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 3px solid var(--Dark-Blue, #1D98BA);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 10px 0 0 0;
+    padding: 5px 0 5px 0;
+    text-align: center;
+    outline: none;
+}
+
+.pick-years-input:focus,
+.pick-players-input:focus {
+    width: 190px;
+    top: 10px;
+    height: 40px;
+    display: flex;
+    position: relative;
+    top: 20%;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 3px solid var(--Dark-Blue, #1D98BA);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 10px 0 0 0;
+    padding: 5px 0 5px 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset; /* Apply box shadow when input is focused */
+    transition: none; /* Disable transition for box shadow */
+}
+
+.confirm-info-gather-names {
+    display: flex;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    /* top: 45%; */
+    top: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.confirm-info-gather-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Set width of button */
+    height: 100%; /* Set height of button */
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.confirm-info-gather-button circle {
+    fill: #1D98BA;
+    stroke: #FFC1C6;
+    stroke-width: 5;
+    width: 100%; /* Set width of button */
+    height: 100%; /* Set height of button */
+}
+
+.confirm-info-gather-button circle:hover {
+    fill: var(--Yellow, #F2A815);
+    stroke: #FFC1C6;
+    stroke-width: 5;
+    width: 100%; /* Set width of button */
+    height: 100%; /* Set height of button */
+}
+
+.confirm-info-gather-button circle:active {
+    fill: var(--Yellow, #F2A815);
+    stroke: #FFC1C6;
+    stroke-width: 5;
+    width: 100%; /* Set width of button */
+    height: 100%; /* Set height of button */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.confirm-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1;
+}
+
+.svg-grabs {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    fill: var(--Yellow, #F2A815);
+    stroke-width: 5px;
+    stroke: var(--Pink, #FFC1C6);
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset; */
+}
+
+/* .confirm-info-gather-button span {
+
+} */
+
+
+/* grabs Formatting */
+
+.name-players-text {
+    position: relative;
+    top: 80px;
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Take full width of the container */
+    height: 50px; /* Set the height */
+    color: #FFF;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center; /* Center text horizontally */
+    margin: 0; /* Remove default margin */
+    padding: 5px 0 0 0;
+    text-transform: uppercase;
+}
+
+.input-container-names {
+    position: relative;
+    top: 20%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 400px
+}
+
+.input-names {
+    margin: 0 15px 15px 15px;
+    /* padding: 10px; */
+    /* width: 200px; */
+}
+
+/* .confirm-info-gather-names {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    bottom: 50px;
+    top: 150px
+} */
+
+.names-input {
+    border: 3px solid var(--Dark-Blue, #1D98BA);
+    background: #FFF;
+    outline: none;
+    text-align: center;
+}
+
+.names-input:focus {
+    border: 3px solid var(--Dark-Blue, #1D98BA);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset; /* Apply box shadow when input is focused */
+    transition: none; /* Disable transition for box shadow */
+}
+
+/* beginGame Formatting */
+
+
+
+.begin-game-body {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white background */
+    z-index: 9999; /* higher z-index to make it hover on top */
+    display: flex;
+    /* height: 500px; */
+    /* padding: 100px 131px 316px 130px; */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+
+.begin-game-content {
+    display: flex;
+    position: relative;
+    top: 60px;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 10px;
+    align-items: center; /* Optional: centers elements vertically */
+    width: 750px;
+    height: 600px;
+    flex-shrink: 0;
+    border: 15px solid var(--Red, #D32424);
+    background: linear-gradient(0deg, var(--Pink, #FFC1C6) 0%, var(--Pink, #FFC1C6) 100%), var(--Dark-Orange, #FF562F);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    text-align: center;
+
+}
+
+.begin-year-draft {
+    top: 75px;
+}
+
+.begin-year-draft,
+.new-to-draft {
+    display: flex;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 70px; /* 87.5% */
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  /* Take full width of the container */
+    height: 50px;  /* Set the height */
+    color: #fff;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;  /* Center text horizontally */
+    margin: 0;          /* Remove default margin */
+    text-transform: uppercase;
+}
+
+.new-to-draft {
+    font-size: 20px;
+    bottom: 75px;
+} 
+
+.confirm-info-gather-button-begin {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Set width of button */
+    height: 100%; /* Set height of button */
+    border: none;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.confirm-info-gather-button-begin circle {
+    fill: var(--Dark-Blue, #1D98BA);
+    stroke: var(--Red, #D32424);
+    stroke-width: 5;
+    width: 100%; /* Set width of button */
+    height: 100%; /* Set height of button */
+}
+
+.confirm-info-gather-button-begin circle:hover {
+    fill: var(--Yellow, #F2A815);
+    stroke: var(--Red, #D32424);
+    stroke-width: 5;
+    width: 100%; /* Set width of button */
+    height: 100%; /* Set height of button */
+}
+
+.confirm-info-gather-button-begin circle:active {
+    fill: var(--Yellow, #F2A815);
+    stroke: #FFC1C6;
+    stroke-width: 5;
+    width: 100%; /* Set width of button */
+    height: 100%; /* Set height of button */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.confirm-text-begin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 1;
+}
+
+.svg-begin {
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0;width: 200px;
+    /* height: 150px; */
+    flex-shrink: 0;
+    fill: var(--Yellow, #F2A815);
+    stroke-width: 5px;
+    stroke: var(--Pink, #FFC1C6);
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Content */
+.modal-content {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 600px;
+    max-height: calc(100% - 40px); /* Adjust as needed */
+    height: auto; /* Allow content to determine height */
+    border: 10px solid #000;
+    background: var(--Cream, #FFF2E9);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: "Roboto Condensed", sans-serif;
+    text-transform: uppercase;
+    overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+.player-name {
+    min-width: 50px; /* Set a minimum width */
+    max-width: 200px; /* Set a maximum width */
+    width: auto; /* Allow the width to adjust based on content */
+    padding: 5px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 30px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.player-container {
+    display: flex;
+    align-items: center; /* Vertically center the content within the container */
+    /* margin-right: 10px; Adjust margin as needed */
+    /* width: 200px */
+}
+
+.draft-num-name-color {
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-flow: column nowrap; /* Display in a column */
+    align-items: center; /* Center items horizontally */
+    width: 100%;
+    margin: auto; /* Center the container */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px
+}
+
+.player-number, .player-name {
+    width: 50px;
+}
+
+.player-number {
+    /* Set width for player number column */
+    /* width: 50px; Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    padding: 5px;
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 30px; /* Adjust line-height to center vertically */
+    margin: auto; /* Align at the center horizontally */
+}
+
+.draft-order-text {
+    font-size: 30px;
+    padding: 0 0 0 0;
+    margin: 0;
+    text-align: center;
+}
+
+.promise {
+    font-size: 10px;
+    padding: 0 0 10px 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hidden-table {
+    display: none;
+}
+
+.player-1 {
+    background-color: #1D98BA
+}
+
+.player-2 {
+    background-color: #F2A815
+}
+
+.player-3 {
+    background-color: #FF562F
+}
+
+.player-4 {
+    background-color: #60851C
+}
+
+.player-5 {
+    background-color: #FFC1C6
+}
+
+.player-6 {
+    background-color: #F78D37
+}
+
+.player-7 {
+    background-color: #B6ABE3
+}
+
+.player-8 {
+    background-color: #65CBD0
+}
+
+.player-9 {
+    background-color: #B2F0FF
+}
+
+.player-10 {
+    background-color: #ACCE82
+}
+
+
+.table-and-results {
+    display: flex; /* Already defined */
+    width: 800px;
+}
+  
+.results-dropdown-container {
+    margin-right: 10px; /* Existing margin for spacing */
+    padding: 5px;
+    order: -1; /* Display first in the flex order */
+    width: 200px;
+    /* width: 220px; */
+    height: 420px;
+    flex-shrink: 0;
+    border: 10px solid var(--Dark-Blue, #1D98BA);
+    background: var(--Cream, #FFF2E9);
+    box-shadow: 0px 4px 4px 10px rgba(0, 0, 0, 0.25) inset;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 10px;
+}
+
+.actual-title {
+    display: flex;
+    flex-wrap: wrap;
+    width: 184px;
+    height: 400px;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.table-board {
+    flex-shrink: 0; /* Already defined */
+    width: 600px
+}
+
+.container-for-all-tables {
+    justify-content: center;
+}
+
+.results-dropdown {
+    display: inline-block; /* Display the dropdown inline */
+    vertical-align: middle; /* Align vertically with the input field */
+    margin-left: 10px; /* Add some space between the input field and the dropdown */
+    display: none;
+    position: absolute;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 10px; /* Adjust line-height to center vertically */
+    /* background-color: orange; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    z-index: 1;
+}
+
+.table-containers {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.table-board th, .table-board td {
+    border: 1px solid #1D98BA; /* Set border color of table cells */
+}
+
+.player-idx-0 {
+    border: 1px solid #1D98BA;
+    border-collapse: collapse;
+}
+
+.player-idx-1 {
+    border: 1px solid #F2A815;
+    border-collapse: collapse;
+}
+
+.player-idx-2 {
+    border: 1px solid #FF562F;
+    border-collapse: collapse;
+}
+
+.player-idx-3 {
+    border: 1px solid #60851C;
+    border-collapse: collapse;
+}
+
+.player--idx-4 {
+    border: 1px solid #FFC1C6;
+    border-collapse: collapse;
+}
+
+.player-idx-5 {
+    border: 1px solid #F78D37;
+    border-collapse: collapse;
+}
+
+.player-idx-6 {
+    border: 1px solid #B6ABE3;
+    border-collapse: collapse;
+}
+
+.player-idx-7 {
+    border: 1px solid #65CBD0;
+    border-collapse: collapse;
+}
+
+.player-idx-8 {
+    border: 1px solid #B2F0FF;
+    border-collapse: collapse;
+}
+
+.player-idx-9 {
+    border: 1px solid #ACCE82;
+    border-collapse: collapse;
+}
+
+.player-idx-0 th, .player-idx-0 td {
+    border: 1px solid #1D98BA;
+    border-collapse: collapse;
+}
+
+.player-idx-1 th, .player-idx-1 td {
+    border: 1px solid #F2A815;
+    border-collapse: collapse;
+}
+
+.player-idx-2 th, .player-idx-2 td {
+    border: 1px solid #FF562F;
+    border-collapse: collapse;
+}
+
+.player-idx-3 th, .player-idx-3 td {
+    border: 1px solid #60851C;
+    border-collapse: collapse;
+}
+
+.player-idx-4 th, .player-idx-4 td {
+    border: 1px solid #FFC1C6;
+    border-collapse: collapse;
+}
+
+.player-idx-5 th, .player-idx-5 td {
+    border: 1px solid #F78D37;
+    border-collapse: collapse;
+}
+
+.player-idx-6 th, .player-idx-6 td {
+    border: 1px solid #B6ABE3;
+    border-collapse: collapse;
+}
+
+.player-idx-7 th, .player-idx-7 td {
+    border: 1px solid #65CBD0;
+    border-collapse: collapse;
+}
+
+.player-idx-8 th, .player-idx-8 td {
+    border: 1px solid #B2F0FF;
+    border-collapse: collapse;
+}
+
+.player-idx-9 th, .player-idx-9 td {
+    border: 1px solid #ACCE82;
+    border-collapse: collapse;
+}
+
+/* Assuming you want the input field to take the size of the table cell */
+td.movie-results-input {
+    position: relative; /* Ensure relative positioning */
+    padding: 0; /* Remove any padding */
+}
+
+/* Assuming you want the input to fill the entire table cell */
+input.movie-input {
+    width: 100%; /* Make input width 100% of its container */
+    height: 100%; /* Make input height 100% of its container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+.confirm-button.current-player-confirm-button {
+    width: 20px;
+    height: 19.234px;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: none;
+    padding: 0; /* Adjust padding if needed */
+}
+
+.selected-movie {
+    pointer-events: none; /* Disable mouse events */
+    background-color: #999; /* Change text color to grey */
+}
+
+.genre-input {
+    position: relative;
+}
+
+.genre-input:hover .genre-dropdown {
+    display: block;
+}
+
+
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+

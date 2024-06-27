@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellowjackets</title>
+    <link rel="stylesheet" href="static/styles.css" href="https://fonts.googleapis.com/css?family=Font+Name">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+    <div class="begin-game-body">
+        <div class="begin-game-content">
+
+            <h1 class="begin-year-draft">Begin the {{ year_chosen }} film draft</h1>
+            <p hidden> {{ year }}<input name="year" min="1970" max="2022"></p>
+            <p hidden> {{ num_players }} <input name="num_players" max="10"></p>
+        
+            
+            <div class="confirm-info-gather-begin">
+            <form action="/player_boards">
+                <button class="confirm-info-gather-button-begin" type="submit">
+                    <svg class="svg-begin" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                        <circle cx="75" cy="75" r="72.5" fill="#1D98BA" stroke="#FFC1C6" stroke-width="5" />
+                        <span class="confirm-text-begin">Confirm</span>
+                    </svg>
+                </button>
+            </form>
+            </div>
+                
+            <h1 class="new-to-draft">New to The Reel Draft? Learn How to Play</h1>
+
+        </div> 
+        <script src="static/script.js"></script>
+    </div>
+</html>

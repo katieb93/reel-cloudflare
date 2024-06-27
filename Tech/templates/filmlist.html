@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <h1>Pick A Year To Draft</h1>
+  {% block content %}    <div>
+    <p></p>What year do you want to draft? <input name="year">
+    <button type="submit">Pick</button>
+ </div>{% endblock %}
+  <footer>© 2023 A Story Studios, Inc. All rights reserved.</footer>
+</body>
+</html>

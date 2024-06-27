@@ -1,0 +1,34 @@
+<table BORDER=1 WIDTH="100%" CELLPADDING="4" CELLSPACING="3">
+    <thead>
+        <tr ALIGN="center">
+            <th COLSPAN="4" WIDTH="50%" CELLPADDING="4" CELLSPACING="3">
+                <br>
+                <h1>To-do list</h1>
+                </br>
+            </th>
+        </tr>
+        <tr ALIGN="center ">
+            <td ALIGN="left "><strong>Agenda</strong></td>
+            <td><strong>Not Started</strong></td>
+            <td><strong>In Progress</strong></td>
+            <td><strong>Complete</strong></td>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {%for item in todo_items%}
+                <td>{{item.name}}</td>
+                <td><input type="checkbox" id="id" name="Tick" value="{{item.id}}"></td>
+                <td><input type="checkbox" id="id" name="Tick" value="{{item.id}}"></td>
+                <td><input type="checkbox" id="id" name="Tick" value="{{item.id}}"></td>
+                {%endfor%}
+            </tr>
+            {% for row in todo_items%}
+            <tr>
+                {%for row in cell%}
+                <td>{{cell}}</td>
+                {%endfor%}
+            </tr>
+            {%endfor%}
+        </tbody>
+</table>

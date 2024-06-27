@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grabs</title>
+    <link rel="stylesheet" href="static/styles.css" href="https://fonts.googleapis.com/css?family=Font+Name">
+</head>
+<body class="body-info-gather">
+    <div class="info-card-display">
+        <div class="players-display"> 
+            <h1 class="name-players-text">Who is playing?</h1>
+            <form class="info-gather-form names-form" action="/player_boards" method="post" onsubmit="myFunction(); return false;">
+                <p hidden> {{ year }}<input name="year" min="1970" max="2022"></p>
+                <p hidden> {{ num_players }} <input name="num_players" max="10"></p>
+            
+                <div class="input-container-names">
+                    {% for name_input in name_inputs %}
+                        <div class="input-names">
+                            <input class="names-input" type="text" id="{{ name_input }}" name="player_{{ loop.index }}_name">
+                        </div>
+                    {% endfor %}
+                </div>
+            
+                <div class="confirm-info-gather-names">
+                    <button class="confirm-info-gather-button" type="submit">
+                        <svg class="svg-grabs" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                            <circle cx="75" cy="75" r="72.5" fill="#1D98BA" stroke="#FFC1C6" stroke-width="5" />
+                            <span class="confirm-text">Confirm</span>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+    
+        function myFunction() {
+            // Perform any client-side actions here if needed
+            // ...
+    
+            // Submit the form programmatically
+            document.forms[0].submit();
+        }
+    
+        // Listen for the Enter key press on the document level
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                // Prevent the default form submission
+                event.preventDefault();
+    
+                // Call your function
+                myFunction();
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Grabs</title>
+</head>
+<body>
+    <h1>Player Inputs</h1>
+    <form action="/player_boards" method="post">
+        <p hidden> {{ year }}<input name="year" min="1970" max="2022"></p>
+        <p hidden> {{ num_players }} <input name="num_players" max="10"></p>
+
+        {% for name_input in name_inputs %}
+            <label for="{{ name_input }}">{{ name_input }}</label>
+            <input type="text" id="{{ name_input }}" name="player_{{ loop.index }}_name">
+        {% endfor %}
+        <button onclick="myFunction()">Click me</button>
+    </form>
+</body>
+</html> -->

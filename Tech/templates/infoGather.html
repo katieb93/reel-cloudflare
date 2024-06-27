@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+  <link rel="stylesheet" href="static/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Font+Name" rel="stylesheet">
+</head>
+<body class="body-info-gather">
+    
+
+    {% block content %}  
+    <div class="year-and-num-info-card">
+        <div class="info-card-display">
+            <div class="players-display">
+                <form class="info-gather-form" action="/grabs">
+
+                    <div class="pick-year-text">
+                        <p class="pick-year">Pick a Year to Draft</p>
+                        <p class="num-of-years">1970-2023</p>
+                        <input class="pick-years-input" name="year" min="1970" max="2022">
+                    </div>
+            
+                    <div class="pick-players-text">
+                        <p class="pick-players">How many players?</p>
+                        <p class="num-of-player">2-10</p>
+                        <input class="pick-players-input" name="num_players" max="10">
+                    </div>
+            
+                    <div class="confirm-info-gather-names">
+                        <button class="confirm-info-gather-button" type="submit">
+                            <span class="confirm-text">Confirm</span>
+                            <svg class="svg_confirm" xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
+                                <g filter="url(#filter0_i_154_629)">
+                                <circle cx="80" cy="80" r="75" fill="#F2A815"/>
+                                </g>
+                                <circle cx="80" cy="80" r="77.5" stroke="#FFC1C6" stroke-width="5"/>
+                                <defs>
+                                <filter id="filter0_i_154_629" x="0" y="0" width="160" height="164" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dy="4"/>
+                                    <feGaussianBlur stdDeviation="2"/>
+                                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_154_629"/>
+                                </filter>
+                                </defs>
+                            </svg>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    
+</body>
+</html>

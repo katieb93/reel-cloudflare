@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+  <link rel="stylesheet" href="static/styles.css" href="https://fonts.googleapis.com/css?family=Font+Name">
+</head>
+<body class="body-index">
+    <!-- <img class="color-film-reel" src="https://previews.dropbox.com/p/thumb/ACNcfZWUEtlwlQoaugrCKR3b85q3op4l8knErHqtTYVuUhXRZRe5bB7v0JgxupUeuTHY-QrGbtK0uXEWIv2rzK7Wvt6_TIi24rvfh-eeoc5PxGdE7cJwyWaHjEFRxb4UT-BiLo9mpbJkAHUze5c4GZkjW3mFdl1m0870rjykTtZRigBwbhOrJibDDUKG6ikG1qK0JMkGBFmuDmYwRneyhOxzckTT_5GGWLRi450xUmOda3a6p2GBx7v5vTYwTVBF9H7bof6jMcKvid1UfBcuhzcCrGIHVrmOX7gcS6vfaqn36loWTzXQiI4CW45XD8FPag9WHOmwLCmXiw7iKlOG3Poe/p.png"/> -->
+    <div>
+        {% block content %}  
+            <div class="left-side">
+                <div class="logline-layout">
+                    <h1 class="pick">Pick your favorite films</h1>
+                    <h1 class="while">While you still can</h1>
+                </div>
+
+                <div class="logo-layout">
+                    <img class="black-reel" src="https://www.dropbox.com/scl/fi/bw6luaoso067rw0cj2877/colorfilmreelimg.png?rlkey=njp6d3lkpm5k8bb0zogefb7ia&st=boz7isim&dl=0"/>
+                    <div class="logo-text-container">
+                        <p class="with">with</p>
+                        <p class="the-logo-index">The Reel Draft</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="image-and-button-container">
+                    <img class="color-film-reel" src="https://www.dropbox.com/scl/fi/bw6luaoso067rw0cj2877/colorfilmreelimg.png?rlkey=njp6d3lkpm5k8bb0zogefb7ia&st=hi58asry&dl=0"/>
+                    <form action="/grabInfo">
+                        <div class="play-button-index-circle">
+                            <button class="play-button play-button-index-text" type="submit">
+                                Play
+                            </button>
+                        </div>  
+                    </form>          
+                </div>
+            </div>
+        {% endblock %}
+    </div>
+    
+</body>
+</html>
+

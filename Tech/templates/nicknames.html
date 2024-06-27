@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}TITLE GOES HERE{% endblock %}</title>
+</head>
+<body>
+    {% block content %}  
+    <div>
+        <h1>Colored Boxes</h1>
+        <form action="/grab-info" method="post">
+                {{ form_content }}
+            <button type="submit">Pick</button>
+        </form>
+    </div>
+    {% endblock %}
+    </div>
+    <footer>© 2023 A Story Studios, Inc. All rights reserved.</footer>
+</body>
+</html>

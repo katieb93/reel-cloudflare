@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellowjackets</title>
+    <link rel="stylesheet" href="static/styles.css" href="https://fonts.googleapis.com/css?family=Font+Name">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    
+
+</head>
+<body>
+
+    <div class="begin-game-body">
+        <div class="begin-game-content">
+
+            <h1 class="begin-year-draft">Begin the {{ year_chosen }} film draft</h1>
+            <p hidden> {{ year }}<input name="year" min="1970" max="2022"></p>
+            <p hidden> {{ num_players }} <input name="num_players" max="10"></p>
+        
+            
+            <div class="confirm-info-gather-begin">
+
+                <button class="confirm-info-gather-button-begin start-button" type="submit">
+                    <svg class="svg-begin" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150" fill="none">
+                        <circle cx="75" cy="75" r="72.5" fill="#1D98BA" stroke="#FFC1C6" stroke-width="5" />
+                        <span class="confirm-text-begin">Confirm</span>
+                    </svg>
+                </button>
+
+            </div>
+                
+            <h1 class="new-to-draft">New to The Reel Draft? Learn How to Play</h1>
+
+        </div> 
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="draft-order-reveal">
+                    <h1 class="draft-order-text" >Draft Order</h1>
+                    <h1 class="promise" >It's randomly selected, we promise</h1>
+                <div class="draft-num-name-color">
+                    {% for player in player_order_dict.values() %}
+                    <div class="player-container">
+                        <h2 class="player-number player-{{ player['number'] }}">
+                            {{ player['number'] }}{% if player['number'] in [1, 2, 3] %}{% if player['number'] == 1 %}{{ "st" }}{% endif %}{% if player['number'] == 2 %}{{ "nd" }}{% endif %}{% if player['number'] == 3 %}{{ "rd" }}{% endif %}{% else %}{{ "th" }}{% endif %}
+                        </h2>
+                        <h2 class="player-name player-{{ player['name'] }}">{{ player['name'] }}</h2>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- <h1>Yellowjackets and Their Numbers</h1>
+
+
+        <p> PLAYER ORDER: {{ player_order_dict }}</p>
+    
+        <p> CURRENT ORDER: <span class="current-order">{{ current_player }}</span> </p> -->
+
+        <!-- <p>
+
+            {% for name, info in player_order_dict.items() %}
+                <li>{{ name }} - {{ info.number }} - Index: {{ loop.index0 }}</li>
+                <button class="confirm-button{% if not startButtonClicked %} disabled{% endif %}" data-number="{{ info.index }}" {% if loop.index0 != current_player %}disabled{% endif %}>Confirm</button>
+            {% endfor %}
+        
+        </p> -->
+
+
+    <p> Year Chosen: {{ year_chosen }}</p>
+    <div class="current-player-info"></div>
+
+    <!-- <p>Current Player: {{ current_player }}</p> -->
+    <p>Game Status: (Add your game status here)</p>
+    <p id="nextPlayer">Next Player: {{ next_player }}</p>
+
+    <p> {{ round_number }} </p>
+
+    <!-- <button class="start-button"> START GAME </button> -->
+
+    <div class="container-for-all-tables">
+        {% for player_data in players_data %}
+          <div class="table-containers hidden-table" data-index="{{ player_data['index'] }}">
+            <h2>{{ player_data['name'] }}</h2>
+      
+            <div class="table-and-results">
+                <table class="table-board player-idx-{{ player_data['index'] }}">
+                    <tr>
+                    <th>Category</th>
+                    <th>Input</th>
+                    <th>Confirmation</th>
+                    </tr>
+                    {% for genre in player_data['genres'] %}
+                    <tr>
+                        <td>{{ genre }}</td>
+                        <td class="movie-results-input movie-results-input-{{ genre }}">
+                            <input type="text" class="movie-input" data-player="{{ player_data['name'] }}" data-genre="{{ genre }}" data-index="{{ player_data['index'] }}" data-combined="{{ player_data['index'] }}_{{ genre }}" />
+                        </td>
+                        <td>
+                        <button class="confirm-button current-player-confirm-button disabled" data-player="{{ player_data['name'] }}" data-genre="{{ genre }}" data-index="{{ player_data['index'] }}" data-combined="{{ player_data['index'] }}_{{ genre }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 22.234C18.038 22.234 23 17.5171 23 11.617C23 5.71696 18.038 1 12 1C5.96203 1 1 5.71696 1 11.617C1 17.5171 5.96203 22.234 12 22.234Z" fill="#1D98BA" stroke="#1D98BA" stroke-width="2"/>
+                            <path d="M8 11.617L11.1875 16.4255L16.5 6.80852" stroke="#FFF2E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+
+                <div class="results-dropdown-container" style="height: 300px; overflow-y: auto;">
+
+                    <!-- <div class="results-dropdown-wildcard"></div> -->
+
+                    {% for genre in player_data['genres'] %}
+                    <div class="results-dropdown results-genre-show" id="{{ player_data['name'] }}_{{ genre }}_results" data-player="{{ player_data['name'] }}" data-genre="{{ genre }}" data-index="{{ player_data['index'] }}" data-combined="{{ player_data['index'] }}_{{ genre }}"></div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+            
+
+            <Pop-up for Scores and Averages
+            <div id="scorePopup" class="popup">
+                <div class="popup-content">
+                    <span class="close">&times;</span>
+                    <h2>Scores</h2>
+                    <div id="scoreContent">
+                         Scores and Averages will be dynamically added here
+                    </div>
+                </div>
+            </div> 
+
+    <script src="static/script.js"></script>
+    <script>
+
+
+    </script>
+</body>
+</html>
